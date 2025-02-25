@@ -1,0 +1,18 @@
+<svg width="36" height="36" xmlns="http://www.w3.org/2000/svg">
+
+ <g>
+  <title>Layer 1</title>
+  <circle id="svg_1" r="18" cy="18" cx="18" fill="#f5c525"/>
+  <g id="svg_2" fill="#FFCC4D">
+   <circle fill="#f8a805" id="svg_3" r="3.5" cy="8.5" cx="10.64706"/>
+   <circle fill="#f8a805" id="svg_4" r="3" cy="17" cx="20"/>
+   <circle fill="#f8a805" id="svg_5" r="3.5" cy="28.5" cx="24.64706"/>
+   <circle fill="#f8a805" id="svg_6" r="2" cy="5" cx="22.14706"/>
+   <circle fill="#f8a805" id="svg_7" r="1" cy="18" cx="3.14706"/>
+   <circle fill="#f8a805" id="svg_8" r="1" cy="9" cx="30.14706"/>
+   <circle fill="#f8a805" id="svg_9" r="1" cy="31" cx="15.14706"/>
+   <circle fill="#f8a805" id="svg_10" r="2" cy="19" cx="32.14706"/>
+   <circle fill="#f8a805" id="svg_11" r="2" cy="23" cx="10.14706"/>
+  </g>
+ </g>
+</svg>
