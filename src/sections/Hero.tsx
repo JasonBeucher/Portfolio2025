@@ -5,6 +5,8 @@ import grainImage from "@/assets/images/grain.jpg"
 import StarIcon from "@/assets/icons/star.svg"
 import SunIcon from "@/assets/icons/sun2.svg"
 import SparkleIcon from "@/assets/icons/sparkle.svg"
+import PaperPlaneIcon from "@/assets/icons/paper-plane.svg"
+import {PaperPlaneAnimation} from "@/components/PaperPlaneAnimation"
 import { HeroOrbit } from "@/components/HeroOrbit"
 import { Cloud } from "@/components/Cloud"
 import dynamic from "next/dynamic"
@@ -61,7 +63,9 @@ export const HeroSection = () => {
             <HeroOrbit size={800} rotation={-72} shouldOrbit orbitDuration="48s" shouldSpin spinDuration="6s">
               <StarIcon className="size-28 text-[#ffd983]" />
             </HeroOrbit>
+
           </div>
+          <PaperPlaneAnimation />
         </div>
       </div>
       <Cloud className="absolute bottom-[150px] right-[110px] md:bottom-[400px] md:right-[250px] lg:bottom-[500px] lg:right-[350px] xl:bottom-[700px] xl:right-[450px]" />
