@@ -94,7 +94,7 @@ export const HeroSection = () => {
         </div>
         <div className="max-w-lg mx-auto">
           <h1 className="font-serif text-3xl md:text-5xl text-center mt-8 tracking-wide">
-            Développeur Fullstack <TypeWriter />
+            Développeur Fullstack <br /> <TypeWriter />
           </h1>
           <p className="mt-4 text-center text-white/60 md:text-lg">
             J’aime créer des applications web à la fois performantes et évolutives, des interfaces fluide et un backend solide, pour offrir la meilleure expérience possible.

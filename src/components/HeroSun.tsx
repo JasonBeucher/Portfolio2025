@@ -12,12 +12,12 @@ export const HeroSun = () => {
     <>
       <div className="absolute left-1/2 -top-8 animate-slide-down dark:hidden z-10">
         <div className="animate-spin-slow">
-          <SunIcon className="size-[500px]" />
+          <SunIcon className="size-[300px] md:size-[500px]" />
         </div>
       </div>
       <div className="absolute left-1/2 -top-8 animate-slide-down hidden dark:block z-10">
         <div className="animate-spin-slow">
-          <MoonIcon className="size-[450px]" />
+          <MoonIcon className="size-[300px] md:size-[450px]" />
         </div>
       </div>
     </>

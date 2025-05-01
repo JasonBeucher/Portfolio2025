@@ -43,10 +43,7 @@ const nextConfig = {
 
     return config;
   },
-  output: "export",
-  reactStrictMode: true,
-  basePath: '',
-  assetPrefix: '',
+
 };
 
 export default nextConfig;

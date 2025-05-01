@@ -68,7 +68,7 @@ export const TypeWriter = () => {
 
     return (
         <span className="text-[#ffcc4d] inline-block min-w-[120px]">
-            {words[index].substring(0, subIndex) || ' '}
+            {words[index].substring(0, subIndex) || '   '}
         </span>
     )
 }
