@@ -171,7 +171,7 @@ export const ScrollableTimeline = ({ workEntries, educationEntries }: Scrollable
           {/* Left card - Education */}
           <div className={`bg-white/5 backdrop-blur-sm dark:bg-gray-900/50 rounded-xl border border-gray-200/10 dark:border-white/5 p-4 lg:p-6 relative min-h-[320px] lg:min-h-[350px] lg:max-h-[500px] overflow-hidden lg:w-1/2`}>
             <div className="text-center mb-3 lg:mb-4">
-              <h3 className="text-lg lg:text-xl font-bold text-[#ffcc4d]">Education</h3>
+              <h3 className="text-lg lg:text-xl font-bold text-[#ffcc4d]">Formation</h3>
             </div>
             <AnimatePresence mode="wait">
               {activeIndex < educationEntries.length ? (
@@ -200,7 +200,7 @@ export const ScrollableTimeline = ({ workEntries, educationEntries }: Scrollable
                 </motion.div>
               ) : (
                 <div className="flex items-center justify-center h-full">
-                  <p className="text-gray-500 dark:text-gray-400">No education for this period</p>
+                  <p className="text-gray-500 dark:text-gray-400"></p>
                 </div>
               )}
             </AnimatePresence>
@@ -209,7 +209,7 @@ export const ScrollableTimeline = ({ workEntries, educationEntries }: Scrollable
           {activeIndex !== 2 && (
             <div className="bg-white/5 backdrop-blur-sm dark:bg-gray-900/50 rounded-xl border border-gray-200/10 dark:border-white/5 p-4 lg:p-6 relative min-h-[320px] lg:min-h-[350px] lg:max-h-[500px] overflow-hidden w-full lg:w-1/2">
               <div className="text-center mb-3 lg:mb-4">
-                <h3 className="text-lg lg:text-xl font-bold text-[#ffcc4d]">Expérience Professionnelles</h3>
+                <h3 className="text-lg lg:text-xl font-bold text-[#ffcc4d]">Expérience Professionnelle</h3>
               </div>
               <AnimatePresence mode="wait">
                 {activeIndex < workEntries.length ? (
