@@ -1,7 +1,18 @@
 import StarIcon from "@/assets/icons/star.svg"
 import { Fragment } from "react"
 
-const words = ["Performant", "Scalable", "Secure", "Reliable", "User-friendly", "Maintanable", "Usable", "Search Optimized", "Interative", "Accessible"];
+const words = [
+  "Performant",  
+  "Évolutif",  
+  "Sécurisé",  
+  "Fiable",  
+  "Intuitif",  
+  "Facile à maintenir",  
+  "Ergonomique",  
+  "Optimisé pour la recherche",  
+  "Interactif",  
+  "Accessible"
+];
 
 export const TapeSection = () => {
   return <div className="py-16 lg:py-24 overflow-x-clip">
@@ -12,8 +23,8 @@ export const TapeSection = () => {
             <Fragment key={i}>
               {words.map(word => (
                 <div key={word} className="inline-flex gap-4 items-center">
-                  <span className="text-sky-600 uppercase font-extrabold text-sm">{word}</span>
-                  <StarIcon className="size-6 text-sky-600 -rotate-12" />
+                  <span className="text-sky-600 dark:text-gray-900 uppercase font-extrabold text-sm">{word}</span>
+                  <StarIcon className="size-6 text-sky-600 dark:text-gray-900 -rotate-12" />
                 </div>
               ))}
             </Fragment>

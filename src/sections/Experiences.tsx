@@ -1,103 +1,132 @@
-import { Timeline } from '@/components/Timeline';
-import { TimelineItem } from '@/components/TimelineItem';
-import { 
-  TechCorpIcon, 
-  InnovateSoftIcon, 
-  WebSolutionsIcon, 
-  StartupLabsIcon 
+'use client'; // Add this since we're using hooks
+
+import { ScrollableTimeline, TimelineEntry } from '@/components/ScrollableTimeline';
+import {
+  TechCorpIcon,
+  InnovateSoftIcon,
+  UniversityIcon,
+  EducationIcon
 } from '@/components/CompanyIcons';
+import { SectionHeader } from '@/components/SectionHeader';
 
 export const ExperiencesSection = () => {
-  return (
-    <section id="experiences" className="py-20">
-      <div className="container">
-        <h2 className="text-3xl md:text-4xl font-serif mb-4 text-center">Experiences</h2>
-        <p className="text-gray-600 dark:text-gray-400 text-center max-w-2xl mx-auto mb-16">
-          Mon parcours professionnel en développement et les compétences acquises au fil des années.
-        </p>
-        
-        <div className="max-w-4xl mx-auto">
-          <Timeline>
-            <TimelineItem 
-              date="2022 - Present"
-              title="Lead Frontend Developer"
-              company="TechCorp"
-              icon={<TechCorpIcon className="size-5" />}
-              description={
-                <div>
-                  <p>
-                    Responsible for leading the frontend team in developing responsive,
-                    high-performance web applications using React, Next.js, and TypeScript.
-                  </p>
-                  <ul className="list-disc pl-5 mt-2 space-y-1">
-                    <li>Implemented CI/CD pipelines to streamline deployment processes</li>
-                    <li>Reduced loading times by 40% through code optimization</li>
-                    <li>Mentored junior developers and conducted code reviews</li>
-                  </ul>
-                </div>
-              }
-            />
-            
-            <TimelineItem 
-              date="2020 - 2022"
-              title="Senior Frontend Developer"
-              company="InnovateSoft"
-              icon={<InnovateSoftIcon className="size-5" />}
-              description={
-                <div>
-                  <p>
-                    Worked on building complex single-page applications with modern JavaScript frameworks.
-                  </p>
-                  <ul className="list-disc pl-5 mt-2 space-y-1">
-                    <li>Led the migration from Angular to React, improving developer productivity</li>
-                    <li>Developed reusable component library used across multiple projects</li>
-                    <li>Implemented state management patterns with Redux and Context API</li>
-                  </ul>
-                </div>
-              }
-            />
-            
-            <TimelineItem 
-              date="2018 - 2020"
-              title="Full-Stack Developer"
-              company="WebSolutions"
-              icon={<WebSolutionsIcon className="size-5" />}
-              description={
-                <div>
-                  <p>
-                    Developed end-to-end solutions for clients across various industries.
-                  </p>
-                  <ul className="list-disc pl-5 mt-2 space-y-1">
-                    <li>Built RESTful APIs using Node.js and Express</li>
-                    <li>Designed database schemas and optimized queries for MongoDB and PostgreSQL</li>
-                    <li>Implemented frontend interfaces using Vue.js and Vuex</li>
-                  </ul>
-                </div>
-              }
-            />
-            
-            <TimelineItem 
-              date="2016 - 2018"
-              title="Junior Developer"
-              company="StartupLabs"
-              icon={<StartupLabsIcon className="size-5" />}
-              description={
-                <div>
-                  <p>
-                    Started my career working on various web development projects.
-                  </p>
-                  <ul className="list-disc pl-5 mt-2 space-y-1">
-                    <li>Developed responsive websites using HTML, CSS, and JavaScript</li>
-                    <li>Gained experience with PHP and WordPress development</li>
-                    <li>Collaborated with designers to implement UI/UX improvements</li>
-                  </ul>
-                </div>
-              }
-              isLast
-            />
-          </Timeline>
+  // Work experience timeline entries
+  const workEntries: TimelineEntry[] = [
+    {
+      id: "job-1",
+      date: "2022 - 2025",
+      title: "Développeur Full-Stack",
+      company: "Porsolt",
+      icon: <TechCorpIcon className="size-4 xl:size-5" />,
+      description: (
+        <div className="space-y-1 xl:space-y-2">
+          <p className="mb-1">
+            Chez Porsolt, j'ai mené la refonte d'une application métier en migrant une solution Microsoft Access vers une API Symfony-centric.
+          </p>
+          <ul className="list-disc pl-4 xl:pl-5 space-y-0.5 xl:space-y-1">
+            <li>Développement d'un système de planification intelligente</li>
+            <li>Migration vers une architecture API-first basée sur Symfony</li>
+            <li>Transformation en hub central pour l'automatisation</li>
+          </ul>
         </div>
-      </div>
+      )
+    },
+    {
+      id: "job-2",
+      date: "2021",
+      title: "Service Informatique",
+      company: "Lycée Raoul Vadepied",
+      icon: <InnovateSoftIcon className="size-4 xl:size-5" />,
+      description: (
+        <div className="space-y-1 xl:space-y-2">
+          <p className="mb-1">
+            J'ai participé à la gestion des infrastructures informatiques du lycée, assurant l'installation et la maintenance des postes.
+          </p>
+          <ul className="list-disc pl-4 xl:pl-5 space-y-0.5 xl:space-y-1">
+            <li>Configuration et gestion des VLAN pour la sécurité</li>
+            <li>Administration système et gestion du réseau</li>
+            <li>Installation et maintenance des postes de travail</li>
+          </ul>
+        </div>
+      )
+    },
+  ];
+
+  // Education timeline entries
+  const educationEntries: TimelineEntry[] = [
+    {
+      id: "edu-1",
+      date: "2022 - 2025",
+      title: "École d'ingénieur",
+      company: "ESIEA",
+      icon: <UniversityIcon className="size-4 xl:size-5" />,
+      description: (
+        <div className="space-y-1 xl:space-y-2">
+          <p className="mb-1">
+            À l'ESIEA, j'ai acquis des compétences en développement logiciel et en gestion de projets informatiques.
+          </p>
+          <ul className="list-disc pl-4 xl:pl-5 space-y-0.5 xl:space-y-1">
+            <li>Concepts avancés en programmation et architecture</li>
+            <li>Projets en équipe avec méthodologies agiles</li>
+            <li>Exploration de la cybersécurité et systèmes embarqués</li>
+          </ul>
+        </div>
+      )
+    },
+    {
+      id: "edu-2",
+      date: "2020 - 2022",
+      title: "BTS SNIR",
+      company: "Lycée Bréquigny",
+      icon: <UniversityIcon className="size-4 xl:size-5" />,
+      description: (
+        <div className="space-y-1 xl:space-y-2">
+          <p className="mb-1">
+            Développement de compétences en programmation, administration système et gestion des réseaux.
+          </p>
+          <ul className="list-disc pl-4 xl:pl-5 space-y-0.5 xl:space-y-1">
+            <li>Applications embarquées et web</li>
+            <li>Administration de systèmes d'exploitation</li>
+            <li>Mise en place et gestion de réseaux</li>
+          </ul>
+        </div>
+      )
+    },
+    {
+      id: "edu-3",
+      date: "2018 - 2020",
+      title: "BAC STi2D",
+      company: "Lycée Réaumur",
+      icon: <EducationIcon className="size-4 xl:size-5" />,
+      description: (
+        <div className="space-y-1 xl:space-y-2">
+          <p className="mb-1">
+            Mon bac STI2D m'a permis de découvrir le monde de l'ingénierie et des technologies.
+          </p>
+          <ul className="list-disc pl-4 xl:pl-5 space-y-0.5 xl:space-y-1">
+            <li>Découverte de l'électronique et de l'informatique</li>
+            <li>Premiers projets en programmation</li>
+            <li>Exploration des innovations technologiques</li>
+          </ul>
+        </div>
+      )
+    }
+  ];
+
+  return (
+    <section id="experiences" className="relative py-6 xl:py-10 min-h-[2300px]">
+      <SectionHeader
+        title="Mes Expériences"
+        eyebrow="Parcours & Réalisations"
+        description="Des expériences qui m'ont permis de grandir et de concrétiser des projets."
+      />
+
+
+      {/* Pass both entry arrays separately to the timeline component */}
+      <ScrollableTimeline
+        workEntries={workEntries}
+        educationEntries={educationEntries}
+      />
     </section>
   );
 };

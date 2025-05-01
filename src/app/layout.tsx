@@ -15,8 +15,8 @@ const calistoga = Calistoga({
 })
 
 export const metadata: Metadata = {
-  title: "Ulysse",
-  description: "Created with the help of Frontend Tribe",
+  title: "Jason Beucher",
+  description: "Portfolio de Jason Beucher, développeur web full-stack",
 };
 
 export default function RootLayout({
@@ -25,16 +25,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" className="dark" suppressHydrationWarning>
       <head>
         <script
           dangerouslySetInnerHTML={{
             __html: `
               try {
-                if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-                  document.documentElement.classList.add('dark')
+                // Set dark theme as default if no preference is stored
+                if (!('theme' in localStorage)) {
+                  localStorage.theme = 'dark';
+                  document.documentElement.classList.add('dark');
+                } else if (localStorage.theme === 'dark') {
+                  document.documentElement.classList.add('dark');
                 } else {
-                  document.documentElement.classList.remove('dark')
+                  document.documentElement.classList.remove('dark');
                 }
               } catch (_) {}
             `,

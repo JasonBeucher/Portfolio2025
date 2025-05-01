@@ -1,23 +1,34 @@
-import memojiImage from "@/assets/images/avatar3.png"
-import Image from "next/image"
-import ArrowDown from "@/assets/icons/arrow-down.svg"
-import grainImage from "@/assets/images/grain.jpg"
-import StarIcon from "@/assets/icons/star.svg"
-import SunIcon from "@/assets/icons/sun2.svg"
-import SparkleIcon from "@/assets/icons/sparkle.svg"
-import PaperPlaneIcon from "@/assets/icons/paper-plane.svg"
-import {PaperPlaneAnimation} from "@/components/PaperPlaneAnimation"
-import { HeroOrbit } from "@/components/HeroOrbit"
-import { Cloud } from "@/components/Cloud"
-import dynamic from "next/dynamic"
-import { HeroSun } from "@/components/HeroSun"
-import { TypeWriter } from "@/components/TypeWriter"
+'use client';
 
-const Scene = dynamic(() => import("@/components/Scene"), { ssr: false })
+import { useRef } from 'react';
+import memojiImage from "@/assets/images/avatar4.png";
+import Image from "next/image";
+import ArrowDown from "@/assets/icons/arrow-down.svg";
+import grainImage from "@/assets/images/grain.jpg";
+import StarIcon from "@/assets/icons/star.svg";
+import SunIcon from "@/assets/icons/sun2.svg";
+import SparkleIcon from "@/assets/icons/sparkle.svg";
+import PaperPlaneIcon from "@/assets/icons/paper-plane.svg";
+import { PaperPlaneAnimation } from "@/components/PaperPlaneAnimation";
+import { HeroOrbit } from "@/components/HeroOrbit";
+import { Cloud } from "@/components/Cloud";
+import dynamic from "next/dynamic";
+import { HeroSun } from "@/components/HeroSun";
+import { TypeWriter } from "@/components/TypeWriter";
+
+const Scene = dynamic(() => import("@/components/Scene"), { ssr: false });
 
 export const HeroSection = () => {
+  const handleScrollToWork = () => {
+    document.getElementById('experiences')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const handleScrollToContact = () => {
+    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
-    <div className="h-screen py-32 md:py-48 lg:py-60 relative z-0 overflow-clip">
+    <div className="h-screen py-32 md:py-48 lg:py-60 relative z-0 overflow-clip min-h-[800px]">
       <div className="absolute inset-0 -z-30 [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_70%,transparent)]">
         <div className="absolute inset-0 -z-30 opacity-5 dark:block hidden"
           style={{
@@ -68,9 +79,9 @@ export const HeroSection = () => {
           <PaperPlaneAnimation />
         </div>
       </div>
-      <Cloud className="absolute bottom-[150px] right-[110px] md:bottom-[400px] md:right-[250px] lg:bottom-[500px] lg:right-[350px] xl:bottom-[700px] xl:right-[450px]" />
-      <Cloud className="absolute bottom-[150px] left-[110px] md:block md:bottom-[400px] md:left-[250px] lg:bottom-[500px] lg:left-[350px] scale-x-[-1] xl:bottom-[700px] xl:left-[450px]" />
-      <div className="container relative">
+      <Cloud className="absolute bottom-[190px] right-[110px] md:bottom-[400px] md:right-[250px] lg:bottom-[500px] lg:right-[350px] xl:bottom-[700px] xl:right-[450px]" />
+      <Cloud className="absolute bottom-[190px] left-[110px] md:block md:bottom-[400px] md:left-[250px] lg:bottom-[500px] lg:left-[350px] scale-x-[-1] xl:bottom-[700px] xl:left-[450px]" />
+      <div className="container relative py-16">
         <div className="flex flex-col items-center relative">
 
           <Image src={memojiImage} className="size-[100px]" alt="Memoji" />
@@ -86,15 +97,22 @@ export const HeroSection = () => {
             Développeur Fullstack <TypeWriter />
           </h1>
           <p className="mt-4 text-center text-white/60 md:text-lg">
-            Je conçois des applications web performantes et évolutives, en alliant une interface fluide à une architecture backend robuste pour une expérience optimale.
+            J’aime créer des applications web à la fois performantes et évolutives, des interfaces fluide et un backend solide, pour offrir la meilleure expérience possible.
           </p>
         </div>
         <div className="flex flex-col md:flex-row justify-center items-center mt-8 gap-4">
-          <button className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl">
+          <button 
+            className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl"
+            onClick={handleScrollToWork}
+          >
             <span className="font-semibold">Découvrez mon travail</span>
             <ArrowDown className="size-4" />
           </button>
-          <button className="inline-flex items-center gap-2 border border-white bg-white text-gray-900 px-6 h-12 rounded-xl">
+          
+          <button 
+            className="inline-flex items-center gap-2 border border-white bg-white text-gray-900 px-6 h-12 rounded-xl"
+            onClick={handleScrollToContact}
+          >
             <span>👋</span>
             <span className="font-semibold">Contactez moi</span>
           </button>
