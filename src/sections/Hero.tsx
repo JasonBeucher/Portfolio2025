@@ -1,14 +1,10 @@
 'use client';
-
-import { useRef } from 'react';
 import memojiImage from "@/assets/images/avatar4.png";
 import Image from "next/image";
 import ArrowDown from "@/assets/icons/arrow-down.svg";
 import grainImage from "@/assets/images/grain.jpg";
 import StarIcon from "@/assets/icons/star.svg";
-import SunIcon from "@/assets/icons/sun2.svg";
 import SparkleIcon from "@/assets/icons/sparkle.svg";
-import PaperPlaneIcon from "@/assets/icons/paper-plane.svg";
 import { PaperPlaneAnimation } from "@/components/PaperPlaneAnimation";
 import { HeroOrbit } from "@/components/HeroOrbit";
 import { Cloud } from "@/components/Cloud";
@@ -97,7 +93,7 @@ export const HeroSection = () => {
             Développeur Fullstack <br /> <TypeWriter />
           </h1>
           <p className="mt-4 text-center text-white/60 md:text-lg">
-            J’aime créer des applications web à la fois performantes et évolutives, des interfaces fluide et un backend solide, pour offrir la meilleure expérience possible.
+          J’aime créer des applications web à la fois performantes et évolutives, avec des interfaces fluides et un backend solide, pour offrir la meilleure expérience possible.
           </p>
         </div>
         <div className="flex flex-col md:flex-row justify-center items-center mt-8 gap-4">
