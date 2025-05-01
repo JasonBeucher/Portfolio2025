@@ -25,8 +25,8 @@ export const ExperiencesSection = () => {
           </p>
           <ul className="list-disc pl-4 xl:pl-5 space-y-0.5 xl:space-y-1">
             <li>Développement d&apos;un système de planification intelligente</li>
-            <li>Migration vers une architecture API-first basée sur Symfony</li>
-            <li>Transformation en hub central pour l&apos;automatisation</li>
+            <li>Collaboration avec d'autres développeurs</li>
+            <li>Utilisation quotidienne par plus de 100 collaborateurs</li>
           </ul>
         </div>
       )
