@@ -9,9 +9,9 @@ export const ContactSection = () => {
   // État pour gérer le message de confirmation de copie
   const [copied, setCopied] = useState(false);
 
-  // Fonction pour copier l'email et ouvrir le client de messagerie
+  // Fonction pour copier l&apos;email et ouvrir le client de messagerie
   const handleContact = () => {
-    // Copie de l'email dans le presse-papiers
+    // Copie de l&apos;email dans le presse-papiers
     navigator.clipboard.writeText(email).then(() => {
       // Afficher le message de confirmation
       setCopied(true);
@@ -21,7 +21,7 @@ export const ContactSection = () => {
       // Ouvrir le client de messagerie
       window.location.href = `mailto:${email}`;
     }).catch(err => {
-      console.error('Erreur lors de la copie de l\'email:', err);
+      console.error('Erreur lors de la copie du mail:', err);
     });
   };
 
@@ -35,7 +35,7 @@ export const ContactSection = () => {
         }></div>
         <div className="flex flex-col md:flex-row gap-8 md:gap-16 items-center">
           <div>
-            <h2 className="font-serif text-2xl md:text-3xl">Construisons ensemble l'avenir du numérique</h2>
+            <h2 className="font-serif text-2xl md:text-3xl">Construisons ensemble l&apos;avenir du numérique</h2>
             <p className="text-sm md:text-base mt-2">
               Vous recherchez un développeur fullstack passionné ? Discutons de vos projets et voyons comment je peux contribuer à leur succès.
             </p>
